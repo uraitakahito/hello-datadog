@@ -11,3 +11,10 @@ Run docker containers:
 ```sh
 docker container run -it --rm --init --hostname=$PROJECT --mount type=bind,src=`pwd`,dst=/app --name $PROJECT-container $PROJECT-image /bin/zsh
 ```
+
+Start the Agent:
+
+```sh
+sudo service datadog-agent start
+sudo datadog-agent status
+```
