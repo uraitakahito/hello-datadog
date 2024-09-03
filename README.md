@@ -9,5 +9,5 @@ PROJECT=$(basename `pwd`) && docker image build -t $PROJECT-image . --build-arg 
 Run docker containers:
 
 ```sh
-docker container run -it --rm --init --mount type=bind,src=`pwd`,dst=/app --name $PROJECT-container $PROJECT-image /bin/zsh
+docker container run -it --rm --init --hostname=$PROJECT --mount type=bind,src=`pwd`,dst=/app --name $PROJECT-container $PROJECT-image /bin/zsh
 ```
